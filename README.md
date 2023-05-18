@@ -1,15 +1,13 @@
-# Flask Coding Challenge
+# Kafka-Flask Coding Challenge
 
-This repository contains the base code to complete the Flask Coding Challenge.
+This repository contains the base code to complete the Kafka-Flask Coding Challenge.
 
 ## Before you start
 
 Make sure you complete the following steps before you start working on the challenge:
 - [ ] Have Python 3.9 or higher installed. We recommend using [pyenv](https://github.com/pyenv/pyenv).
 - [ ] Have installed Poetry. Visit the [poetry](https://python-poetry.org/docs/) website for more info.
-- [ ] Have access to some SQL database. We recommend using Postgres.
-  - You can use ElephantSQL to get a free Postgres database instance in the cloud [ElephantSQL](https://www.elephantsql.com/plans.html).
-  - Another good alternative is running Postgres in a Docker container, but this is not provided.
+- [ ] Have docker and docker-compose installed (you can also use cloud resources, but that's on you).
 - [ ] Clone this repository and install the dependencies using `poetry install`.
   - **Do this before the interview so you don't have to wait for the dependencies to install or lose time with environment setup.**
 
@@ -19,8 +17,11 @@ Follow the steps below to get started with the challenge:
 1. We're using alembic to manage migrations. Run the initial migrations using `poetry run alembic upgrade head`.
     1. You'll have to setup your database connection string in the `alembic.ini` file.
 2. Start your flask server using `poetry run flask run`.
+3. Create a topic in the Kafka cluster: `docker exec broker kafka-topics --bootstrap-server broker:9092 --create --topic TOPIC`
 
-Follow the Challenge instructions in the [challenge](https://docs.google.com/document/d/1_U4LMNmt9pkfWpUU5vkTox8RDa9d-EUNuiByW62tTso) file.
+Getting/setting Kafka configs are on you.
+
+Follow the Challenge instructions in the [challenge](https://docs.google.com/document/d/1idGbY52tQ9v_RdF8U_yEQwt_Eg9ldqZoEigryT2eDMA) file.
 
 ## Folder structure:
 
