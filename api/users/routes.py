@@ -20,6 +20,7 @@ class UserSchema(BaseModel):
     last_login: str
     first_name: str
     last_name: str
+    is_admin: bool
 
 
 class UserList(BaseModel):
